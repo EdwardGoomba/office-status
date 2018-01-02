@@ -42,10 +42,12 @@ meetSpaces.onreadystatechange = function() {
 
 // The following uses jQuery for the AJAX - uncomment and replace above code as needed
 
-// meetSpaces.open('GET', '../data/rooms.json');
-// meetSpaces.send();
+meetSpaces.open('GET', '../data/rooms.json');
+meetSpaces.send();
 //
 // $(document).ready(function () {
+//
+//   // AJAX request for employee status
 //   var url = "../data/employees.json";
 //
 //   $.getJSON(url, function (response) {
@@ -61,5 +63,20 @@ meetSpaces.onreadystatechange = function() {
 //     statusHTML += '</ul>';
 //     $('#employeeList').html(statusHTML);
 //   }); //end getJSON
+//
+//   // New AJAX request for room status
+//   $.getJSON('../data/rooms.json', function (status) {
+//     var roomStatus = '<ul class="rooms">';
+//     $.each(status, function (index, room) {
+//       if (room.available === true) {
+//         roomStatus += '<li class="empty">';
+//       } else {
+//         roomStatus += '<li class="full">';
+//       }
+//       roomStatus += room.room + '</li>';
+//     });
+//     roomStatus += '</ul>';
+//     $('#roomList').html(roomStatus)
+//   }); // end getJSON
 //
 // }); // end ready
